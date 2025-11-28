@@ -4,13 +4,12 @@ def create_codon_dict(file_path):
     f.close()
 
     dict = {}
-    for row in rows[0:]:
+    for row in rows:
       cell = row.strip().split('\t')
       key = cell[0]
       value = cell[2]
       dict[key] = value
 
-      dict
     return dict
     
 
