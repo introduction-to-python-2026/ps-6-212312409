@@ -1,17 +1,18 @@
 def create_codon_dict(file_path):
-    file_path = "data/codons.txt"
     f = open(file_path,"r")
-    lines = f.readlines()
-    f.close
+    rows = f.readlines()
+    f.close()
+
     dict = {}
-    for l in lines:
-        dict +=l.strip()
-        lines.split
-        cells = l.find_all ('td)
-        key = cells[0].text
-        value = cells[3]text
-        dict(key) = value
+    for row in rows[0:]:
+      cell = row.strip().split('\t')
+      key = cell[0]
+      value = cell[2]
+      dict[key] = value
+
+      dict
     return dict
+    
 
 
 
